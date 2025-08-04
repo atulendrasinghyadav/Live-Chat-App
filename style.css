@@ -1,0 +1,134 @@
+body {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-container {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+    width: 60vw;
+    max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 8px 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 18px;
+    overflow-y: auto;
+    background: #f7f8fa;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-height: 55vh;
+}
+/* // ...existing code... */
+
+.message {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.message.sent {
+  flex-direction: row-reverse;
+  justify-content: end;
+}
+
+.message.received {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.message .avatar {
+  width: 32px;
+  height: 32px;
+  background: #667eea;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.15);
+}
+
+.message.sent .bubble {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  border-bottom-right-radius: 0;
+  margin-left: 8px;
+}
+
+.message.received .bubble {
+  background: #e4e6eb;
+  color: #333;
+  border-bottom-left-radius: 0;
+  margin-right: 8px;
+}
+
+/* // ...existing code... */
+.bubble {
+    padding: 12px 18px;
+    border-radius: 16px;
+    max-width: 70%;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.07);
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.chat-input {
+    display: flex;
+    padding: 16px;
+    background: #fff;
+    border-top: 1px solid #ececec;
+    gap: 10px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 12px;
+    background: #f1f3f6;
+    font-size: 1rem;
+    outline: none;
+    transition: background 0.2s;
+}
+
+.chat-input input:focus {
+    background: #e4e6eb;
+}
+
+.chat-input button {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 0 22px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.chat-input button:hover {
+    background: linear-gradient(90deg, #764ba2 0%, #667eea 100%);
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Chat App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h2>Live Chat</h2>
+        </header>
+        <div class="chat-messages">
+            <div class="message received">
+                <!-- <span class="avatar"></span>
+                <div class="bubble"></div> -->
+            </div>
+            <div class="message sent">
+                <!-- <span class="avatar"></span>
+                <div class="bubble"></div> -->
+            </div>
+            <!-- More messages -->
+        </div>
+        <form class="chat-input">
+            <input type="text" placeholder="Type your message..." />
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
